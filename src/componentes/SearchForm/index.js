@@ -1,18 +1,16 @@
-import React, { useEffect } from 'react'
-import OpenWeatherServices from '../../services/OpenWeatherServices'
+import React, { useEffect } from "react";
+import OpenWeatherServices from "../../services/OpenWeatherServices";
 
-export default function SearchForm () {
+export default function SearchForm() {
   useEffect(() => {
-    OpenWeatherServices.currentWeather().then((data)=>console.log(data))
-  }, [])
+    OpenWeatherServices.currentWeather().then((data) => console.log(data));
+  }, []);
 
   return (
-        <form>
-
-            <select name="selector">
-            </select>
-
-        </form>
-
-  )
+    <form>
+      <select name="selector">
+        <option>HOla</option>
+      </select>
+    </form>
+  );
 }
