@@ -1,8 +1,8 @@
 import axios from 'axios'
 
-const BASE_URL = "http://localhost:3001"
+const BASE_URL = "http://localhost:3000"
 
-const API = axios.create({
+export default API = axios.create({ 
     baseURL: BASE_URL,
     timeout: 5000,
     headers: {
@@ -14,3 +14,5 @@ const API = axios.create({
     }
 
 })
+
+

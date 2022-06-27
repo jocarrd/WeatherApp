@@ -1,10 +1,8 @@
-import React from "react";
+import React from 'react'
 import { Routes, Route } from 'react-router-dom'
-import Home from "../pages/Home";
+import Home from '../pages/Home'
 
-
-
-function App() {
+function App () {
   return (
     <div className="App">
       <Routes>
@@ -12,7 +10,7 @@ function App() {
       </Routes>
 
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
