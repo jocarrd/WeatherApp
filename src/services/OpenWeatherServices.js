@@ -5,15 +5,19 @@ const OpenWeatherServices = {
   currentWeather: (lat, lon) =>
     new Promise((resolve, reject) => {
       API.get(
-        `${OpenWeatherEP.CURRENT_WEATHER}?lat=${lat}&long=${lon}&appid=${OpenWeatherEP.API_KEY}`
-      ).then(resolve);
+        `${OpenWeatherEP.CURRENT_WEATHER}?lat=${lat}&lon=${lon}&appid=${OpenWeatherEP.API_KEY}`
+      )
+        .then(resolve)
+        .catch((err) => console.log(err));
     }),
 
-  geoCoding: (cityName, statusCode, countryCode, limit) =>
+  geoCoding: (cityName, limit) =>
     new Promise((resolve, reject) => {
       API.get(
-        `${OpenWeatherEP.GEOCODING}?q=${cityName},${statusCode},${countryCode}&limit=${limit}&appid=${OpenWeatherEP.API_KEY}`
-      );
+        `${OpenWeatherEP.GEOCODING}?q=${cityName}&limit=${limit}&appid=${OpenWeatherEP.API_KEY}`
+      )
+        .then(resolve)
+        .catch((err) => console.log(err));
     }),
 };
 
