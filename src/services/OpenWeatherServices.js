@@ -7,8 +7,8 @@ const OpenWeatherServices = {
       API.get(
         `${OpenWeatherEP.CURRENT_WEATHER}?lat=${lat}&lon=${lon}&appid=${OpenWeatherEP.API_KEY}`
       )
-        .then(resolve)
-        .catch((err) => console.log(err));
+        .then((response) => resolve(response.data))
+        .catch(reject);
     }),
 
   geoCoding: (cityName, limit) =>
@@ -16,8 +16,8 @@ const OpenWeatherServices = {
       API.get(
         `${OpenWeatherEP.GEOCODING}?q=${cityName}&limit=${limit}&appid=${OpenWeatherEP.API_KEY}`
       )
-        .then(resolve)
-        .catch((err) => console.log(err));
+        .then((response) => resolve(response.data))
+        .catch(reject);
     }),
 };
 

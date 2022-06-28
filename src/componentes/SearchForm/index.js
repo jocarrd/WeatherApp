@@ -1,20 +1,24 @@
-import React, { useEffect } from "react";
+import React from "react";
+
+import Form from "react-bootstrap/Form";
 import OpenWeatherServices from "../../services/OpenWeatherServices";
 
 export default function SearchForm() {
-  useEffect(() => {
-    OpenWeatherServices.currentWeather(35, 139).then((data) =>
-      console.log(data)
+  const handleOnChange = (data) => {
+    OpenWeatherServices.geoCoding(
+      `${data.target.value},ES
+    `,
+      2
+    ).then((data) =>
+      OpenWeatherServices.currentWeather(data[0].lat, data[0].lon).then(
+        console.log
+      )
     );
-
-    OpenWeatherServices.geoCoding("bilbao", 2).then((response) =>
-      console.log(response)
-    );
-  }, []);
-
+  };
   return (
-    <form>
-      <select name="selector"></select>
-    </form>
+    <Form.Select onChange={handleOnChange}>
+      <option value="Logroño">Logroño</option>
+      <option>Madrid</option>
+    </Form.Select>
   );
 }
