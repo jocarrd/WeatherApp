@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import SearchForm from "../../componentes/SearchForm";
+import { useSearch } from "../../hooks/useSearch";
 
 export default function Home() {
+  const { prediction } = useSearch();
+
+  useEffect(() => {
+    console.log(prediction);
+  }, [prediction]);
+
   return (
     <div className="container">
       <div className="row mt-5">

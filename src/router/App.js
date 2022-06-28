@@ -1,16 +1,18 @@
-import React from 'react'
-import { Routes, Route } from 'react-router-dom'
-import Home from '../pages/Home'
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Home from "../pages/Home";
+import { SearhContextProvider } from "../context/searchContext";
 
-function App () {
+function App() {
   return (
     <div className="App">
-      <Routes>
-        <Route element={<Home />} path="/" />
-      </Routes>
-
+      <SearhContextProvider>
+        <Routes>
+          <Route element={<Home />} path="/" />
+        </Routes>
+      </SearhContextProvider>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
