@@ -18,7 +18,7 @@ export function useSearch() {
         (response) => {
           const description = response.current.weather[0].description;
           const icon = response.current.weather[0].icon;
-          const daily = { ...response.daily };
+          const daily = response.daily;
 
           setPrediction({
             current: {

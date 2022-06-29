@@ -22,16 +22,13 @@ export default function Home() {
       </div>
 
       <div className="row mt-5">
-        <div className="col-md-3"></div>
-
-        <div className="col-md-6">
+        <div className="col-md-12">
           <WeatherCard
             location={location}
             current={prediction?.current}
-            title
+            dailyPrediction={prediction?.daily}
           ></WeatherCard>
         </div>
-        <div className="col-md-3"></div>
       </div>
     </div>
   );

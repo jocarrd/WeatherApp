@@ -1,13 +1,20 @@
 import React from "react";
 import "../WeatherCard/WeatherCard.css";
 import Card from "react-bootstrap/Card";
+import DayPrediction from "../DayPrediction";
+import { dias, meses } from "../../utilities/date";
 
-export default function WeatherCard({ location, current }) {
+export default function WeatherCard({ location, current, dailyPrediction }) {
   return (
     <Card className="text-center">
       <Card.Header>{location}</Card.Header>
       <Card.Body>
-        <Card.Title>Actualmente</Card.Title>
+        <Card.Title>
+          {dias[new Date().getDay()].toUpperCase()} {new Date().getDate()}{" "}
+          {meses[new Date().getMonth()]}
+        </Card.Title>
+        <Card.Title>{new Date().toLocaleTimeString()}</Card.Title>
+
         <div className="row">
           <div className="col">
             <img
@@ -23,6 +30,23 @@ export default function WeatherCard({ location, current }) {
       </Card.Body>
       <Card.Footer>
         <Card.Text>Proximos días</Card.Text>
+        <div className="row">
+          {dailyPrediction.map((element, key) => {
+            return (
+              <div key={key} className="col">
+                <DayPrediction
+                  tempMin={element.temp.min}
+                  tempMax={element.temp.max}
+                  icon={element.weather[0].icon}
+                  dayName={dias[
+                    new Date(element.dt * 1000).getDay()
+                  ].toUpperCase()}
+                  dayNumber={new Date(element.dt * 1000).getDate()}
+                ></DayPrediction>
+              </div>
+            );
+          })}
+        </div>
       </Card.Footer>
     </Card>
   );
