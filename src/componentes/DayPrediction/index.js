@@ -1,4 +1,5 @@
 import React from "react";
+import "../DayPrediction/DayPrediction.css";
 
 export default function DayPrediction({
   dayName,

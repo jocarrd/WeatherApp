@@ -2,6 +2,7 @@ import React from "react";
 
 import Form from "react-bootstrap/Form";
 import { useSearch } from "../../hooks/useSearch";
+import { options } from "../../utilities/options";
 
 export default function SearchForm() {
   const { setLocation } = useSearch();
@@ -11,7 +12,13 @@ export default function SearchForm() {
   };
   return (
     <Form.Select onChange={handleOnChange}>
-      <option value="Logroño">Logroño</option>
+      {options.map((element, key) => {
+        return (
+          <option key={key} value={element.nm}>
+            {element.nm}
+          </option>
+        );
+      })}
       <option>Madrid</option>
     </Form.Select>
   );

@@ -10,7 +10,8 @@ export default function WeatherCard({ location, current, dailyPrediction }) {
       <Card.Header>{location}</Card.Header>
       <Card.Body>
         <Card.Title>
-          {dias[new Date().getDay()].toUpperCase()} {new Date().getDate()}{" "}
+          {dias[new Date().getDay()].toUpperCase()} {new Date().getDate()}
+          {" de "}
           {meses[new Date().getMonth()]}
         </Card.Title>
         <Card.Title>{new Date().toLocaleTimeString()}</Card.Title>
@@ -22,7 +23,7 @@ export default function WeatherCard({ location, current, dailyPrediction }) {
             ></img>
           </div>
           <div className="col">
-            <h4 className="temperature">{current?.temp} º</h4>
+            <p className="temperature">{current?.temp} º</p>
           </div>
         </div>
 
