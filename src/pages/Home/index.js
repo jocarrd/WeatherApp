@@ -1,20 +1,18 @@
-import React, { useEffect } from "react";
+import React from "react";
 import SearchForm from "../../componentes/SearchForm";
 import WeatherCard from "../../componentes/WeatherCard";
 import { useSearch } from "../../hooks/useSearch";
 
 export default function Home() {
   const { prediction, location } = useSearch();
-  useEffect(() => {
-    console.log(prediction);
-    console.log(location);
-  }, [prediction, location]);
 
   return (
     <div className="container">
       <div className="row mt-5">
         <div className="col-xl-12">
-          <h1 className="mb-5 ">Seleccione una ciudad para ver el tiempo !</h1>
+          <h1 className="mb-5 ">
+            Seleccione una ciudad para consultar el tiempo !
+          </h1>
           <SearchForm />
         </div>
       </div>

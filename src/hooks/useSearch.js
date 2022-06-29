@@ -19,12 +19,24 @@ export function useSearch() {
           const description = response.current.weather[0].description;
           const icon = response.current.weather[0].icon;
           const daily = response.daily;
-
+          const humidity = response.current.weather[0].humidity;
+          const windSpeed = response.current.weather[0].wind_speed;
+          const windDeg = response.current.weather[0].wind_deg;
+          const pressure = response.current.weather[0].pressure;
+          const dewPoint = response.current.weather[0].dew_point;
+          const feelsLike = response.current.weather[0].feels_like;
+          console.log(response);
           setPrediction({
             current: {
               temp: response.current.temp,
               description: description,
               icon: icon,
+              humidity: humidity,
+              windSpeed,
+              windDeg,
+              pressure,
+              dewPoint,
+              feelsLike,
             },
             daily: daily,
           });
