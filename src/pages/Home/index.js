@@ -2,9 +2,11 @@ import React from "react";
 import SearchForm from "../../componentes/SearchForm";
 import WeatherCard from "../../componentes/WeatherCard";
 import { useSearch } from "../../hooks/useSearch";
+import Spinner from "react-bootstrap/Spinner";
+import "../Home/Home.css";
 
 export default function Home() {
-  const { prediction, location } = useSearch();
+  const { prediction, location, loading } = useSearch();
 
   return (
     <div className="container">
@@ -19,11 +21,18 @@ export default function Home() {
 
       <div className="row mt-5">
         <div className="col-md-12">
-          <WeatherCard
-            location={location}
-            current={prediction?.current}
-            dailyPrediction={prediction?.daily}
-          ></WeatherCard>
+          {!loading && location ? (
+            <WeatherCard
+              location={location}
+              current={prediction?.current}
+              dailyPrediction={prediction?.daily}
+            ></WeatherCard>
+          ) : (
+            <div className="spinner">
+              <Spinner animation="border" role="status"></Spinner>
+              <p className="">Cargando...</p>
+            </div>
+          )}
         </div>
       </div>
     </div>

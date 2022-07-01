@@ -9,7 +9,8 @@ export function useSearch() {
 
   const [loading, setLoading] = useState(false);
 
-  const locationToUse = location || localStorage.getItem("lastLocation");
+  const locationToUse =
+    location || localStorage.getItem("lastLocation") || "Logroño";
   useEffect(() => {
     setLoading(true);
     OpenWeatherServices.geoCoding(`${locationToUse},ES`, 2).then((data) => {
@@ -19,16 +20,15 @@ export function useSearch() {
           const description = response.current.weather[0].description;
           const icon = response.current.weather[0].icon;
           const daily = response.daily;
-          const humidity = response.current.weather[0].humidity;
-          const windSpeed = response.current.weather[0].wind_speed;
-          const windDeg = response.current.weather[0].wind_deg;
-          const pressure = response.current.weather[0].pressure;
-          const dewPoint = response.current.weather[0].dew_point;
-          const feelsLike = response.current.weather[0].feels_like;
-          console.log(response);
+          const humidity = response.current.humidity;
+          const windSpeed = response.current.wind_speed;
+          const windDeg = response.current.wind_deg;
+          const pressure = response.current.pressure;
+          const dewPoint = response.current.dew_point;
+          const feelsLike = response.current.feels_like;
           setPrediction({
             current: {
-              temp: response.current.temp,
+              temperature: response.current.temp,
               description: description,
               icon: icon,
               humidity: humidity,
@@ -42,8 +42,8 @@ export function useSearch() {
           });
           localStorage.setItem("lastLocation", location);
           localStorage.setItem("lastPrediction", JSON.stringify(response));
-          setLoading(false);
           setLocation(location);
+          setLoading(false);
         }
       );
     });
