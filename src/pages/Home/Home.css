@@ -1,4 +1,10 @@
+.spinner p{
+    text-align: center;
+}
 
+.spinner .spinner-border{
+    margin-left: 48.5%;
+}
 
 
 

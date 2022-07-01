@@ -1,6 +1,10 @@
 import React, { useState } from "react";
-
+import PropTypes from "prop-types";
 const Context = React.createContext({});
+
+SearhContextProvider.propTypes = {
+  children: PropTypes.node.isRequired,
+};
 
 export function SearhContextProvider({ children }) {
   const [prediction, setPrediction] = useState(() =>

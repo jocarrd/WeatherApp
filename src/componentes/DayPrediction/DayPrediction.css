@@ -1,18 +1,19 @@
 .day-prediction-container:hover{
-
-    background-color: #5DE6DE;
-    
-    
+    background-color: #5DE6DE;   
 }
 .day-prediction-container{
     border: 1px solid transparent;
     border-radius: 16px;
-    padding: 12px;
-    
-    
+    padding: 12px; 
 }
 .day-prediction-container::hover img{
-    border-color: aliceblue,;
+    border-color: aliceblue;  
+}
+.red{
+    color: red;
+}
+.blue{
+    color: blue;
 }
 
 

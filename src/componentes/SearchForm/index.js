@@ -5,13 +5,13 @@ import { useSearch } from "../../hooks/useSearch";
 import { options } from "../../utilities/options";
 
 export default function SearchForm() {
-  const { setLocation } = useSearch();
+  const { location, setLocation } = useSearch();
 
   const handleOnChange = (data) => {
     setLocation(data.target.value);
   };
   return (
-    <Form.Select onChange={handleOnChange}>
+    <Form.Select defaultValue={location} onChange={handleOnChange}>
       {options.map((element, key) => {
         return (
           <option key={key} value={element.nm}>

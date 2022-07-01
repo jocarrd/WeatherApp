@@ -21,7 +21,7 @@ export default function Home() {
 
       <div className="row mt-5">
         <div className="col-md-12">
-          {!loading && location ? (
+          {!loading ? (
             <WeatherCard
               location={location}
               current={prediction?.current}

@@ -7,13 +7,11 @@ export function useSearch() {
   const { prediction, setPrediction, location, setLocation } =
     useContext(Context);
 
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
-  const locationToUse =
-    location || localStorage.getItem("lastLocation") || "Logroño";
   useEffect(() => {
     setLoading(true);
-    OpenWeatherServices.geoCoding(`${locationToUse},ES`, 2).then((data) => {
+    OpenWeatherServices.geoCoding(`${location},ES`, 2).then((data) => {
       const datos = { ...data[0] };
       OpenWeatherServices.weatherPrediction(datos.lat, datos.lon).then(
         (response) => {

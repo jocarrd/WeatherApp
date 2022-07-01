@@ -24,7 +24,8 @@ export default function DayPrediction({
       </p>
       <img src={`http://openweathermap.org/img/wn/${icon}@2x.png`}></img>
       <p>
-        {tempMax} | {tempMin}
+        <span className="red">{tempMax} </span> |{" "}
+        <span className="blue">{tempMin}</span>
       </p>
     </div>
   );

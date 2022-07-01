@@ -7,7 +7,7 @@ import PropTypes from "prop-types";
 
 const current = PropTypes.shape({
   icon: PropTypes.string.isRequired,
-  temperature: PropTypes.number.isRequired,
+  temperature: PropTypes.number,
   description: PropTypes.string.isRequired,
 });
 
