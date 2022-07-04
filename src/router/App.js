@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <SearhContextProvider>
         <Routes>
-          <Route element={<Home />} path="/" />
+          <Route element={<Home />} path="/*" />
         </Routes>
       </SearhContextProvider>
     </div>

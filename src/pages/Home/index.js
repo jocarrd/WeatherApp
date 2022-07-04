@@ -13,7 +13,7 @@ export default function Home() {
       <div className="row mt-5">
         <div className="col-xl-12">
           <h1 className="mb-5 ">
-            Seleccione una ciudad para consultar el tiempo !
+            ¡Seleccione una ciudad para consultar el tiempo !
           </h1>
           <SearchForm />
         </div>

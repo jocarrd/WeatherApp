@@ -24,8 +24,11 @@ export function useSearch() {
           const pressure = response.current.pressure;
           const dewPoint = response.current.dew_point;
           const feelsLike = response.current.feels_like;
+          const dt = response.current.dt;
+
           setPrediction({
             current: {
+              dt: dt,
               temperature: response.current.temp,
               description: description,
               icon: icon,
@@ -38,6 +41,7 @@ export function useSearch() {
             },
             daily: daily,
           });
+
           localStorage.setItem("lastLocation", location);
           localStorage.setItem("lastPrediction", JSON.stringify(response));
           setLocation(location);

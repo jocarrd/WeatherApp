@@ -1,36 +1,45 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "../WeatherCard/WeatherCard.css";
 import Card from "react-bootstrap/Card";
 import DayPrediction from "../DayPrediction";
-import { dias, meses } from "../../utilities/date";
 import PropTypes from "prop-types";
-
-const current = PropTypes.shape({
-  icon: PropTypes.string.isRequired,
-  temperature: PropTypes.number,
-  description: PropTypes.string.isRequired,
-});
+import {
+  getDayName,
+  getDate,
+  getMonthName,
+  localeTimeString,
+} from "../../utilities/date";
 
 WeatherCard.propTypes = {
   location: PropTypes.string.isRequired,
-  current: PropTypes.objectOf(current).isRequired,
-  dailyPrediction: PropTypes.arrayOf(PropTypes.object),
+  current: PropTypes.shape({
+    icon: PropTypes.string.isRequired,
+    temperature: PropTypes.number.isRequired,
+    description: PropTypes.string.isRequired,
+    dt: PropTypes.number.isRequired,
+  }).isRequired,
+  dailyPrediction: PropTypes.arrayOf(
+    PropTypes.shape({
+      temp: PropTypes.shape({
+        min: PropTypes.number.isRequired,
+        max: PropTypes.number.isRequired,
+      }),
+      dt: PropTypes.number.isRequired,
+      weather: PropTypes.array.isRequired,
+    })
+  ),
 };
 export default function WeatherCard({ location, current, dailyPrediction }) {
-  useEffect(() => {
-    console.log(current);
-    console.log(dailyPrediction);
-  }, []);
   return (
     <Card className="text-center">
       <Card.Header>{location}</Card.Header>
       <Card.Body>
         <Card.Title>
-          {dias[new Date().getDay()].toUpperCase()} {new Date().getDate()}
+          {getDayName(current?.dt).toUpperCase()} {getDate(current?.dt)}
           {" de "}
-          {meses[new Date().getMonth()]}
+          {getMonthName(current?.dt)}
         </Card.Title>
-        <Card.Title>{new Date().toLocaleTimeString()}</Card.Title>
+        <Card.Title>{localeTimeString(current?.dt)}</Card.Title>
 
         <div className="row">
           <div className="col">
@@ -55,10 +64,8 @@ export default function WeatherCard({ location, current, dailyPrediction }) {
                   tempMin={element?.temp.min}
                   tempMax={element?.temp.max}
                   icon={element?.weather[0].icon}
-                  dayName={dias[
-                    new Date(element?.dt * 1000).getDay()
-                  ].toUpperCase()}
-                  dayNumber={new Date(element?.dt * 1000).getDate()}
+                  dayName={getDayName(element?.dt).toUpperCase()}
+                  dayNumber={getDate(element?.dt)}
                 ></DayPrediction>
               </div>
             );
