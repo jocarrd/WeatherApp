@@ -1,37 +1,15 @@
-export const days = [
-  "domingo",
-  "lunes",
-  "martes",
-  "miércoles",
-  "jueves",
-  "viernes",
-  "sábado",
-];
-export const months = [
-  "Enero",
-  "Febrero",
-  "Marzo",
-  "Abril",
-  "Mayo",
-  "Junio",
-  "Julio",
-  "Agosto",
-  "Septiembre",
-  "Octubre",
-  "Noviembre",
-  "Diciembre",
-];
-
 export const getDayName = (dt) => {
-  return days[new Date(dt * 1000).getDay()];
+  return new Date(dt * 1000).toLocaleString("es", { weekday: "long" });
 };
 export const getMonthName = (dt) => {
-  return months[new Date(dt * 1000).getMonth()];
+  return new Date(dt * 1000).toLocaleString("es", { month: "long" });
 };
 export const getDate = (dt) => {
   return new Date(dt * 1000).getDate();
 };
-
+export const getYear = (dt) => {
+  return new Date(dt * 1000).toLocaleString("es", { year: "numeric" });
+};
 export const localeTimeString = (dt) => {
   return new Date(dt * 1000).toLocaleTimeString();
 };

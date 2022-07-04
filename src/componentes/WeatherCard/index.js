@@ -2,12 +2,14 @@ import React from "react";
 import "../WeatherCard/WeatherCard.css";
 import Card from "react-bootstrap/Card";
 import DayPrediction from "../DayPrediction";
+import { WiStrongWind, WiHumidity } from "react-icons/wi";
 import PropTypes from "prop-types";
 import {
   getDayName,
   getDate,
   getMonthName,
   localeTimeString,
+  getYear,
 } from "../../utilities/date";
 
 WeatherCard.propTypes = {
@@ -17,6 +19,8 @@ WeatherCard.propTypes = {
     temperature: PropTypes.number.isRequired,
     description: PropTypes.string.isRequired,
     dt: PropTypes.number.isRequired,
+    windSpeed: PropTypes.number.isRequired,
+    humidity: PropTypes.number.isRequired,
   }).isRequired,
   dailyPrediction: PropTypes.arrayOf(
     PropTypes.shape({
@@ -38,8 +42,11 @@ export default function WeatherCard({ location, current, dailyPrediction }) {
           {getDayName(current?.dt).toUpperCase()} {getDate(current?.dt)}
           {" de "}
           {getMonthName(current?.dt)}
+          {" de "}
+          {getYear(current?.dt)}
         </Card.Title>
         <Card.Title>{localeTimeString(current?.dt)}</Card.Title>
+        <Card.Text>{current?.description}</Card.Text>
 
         <div className="row">
           <div className="col">
@@ -52,7 +59,10 @@ export default function WeatherCard({ location, current, dailyPrediction }) {
           </div>
         </div>
 
-        <Card.Text>{current?.description}</Card.Text>
+        <Card.Text>
+          <WiHumidity size="24px" /> {current.humidity} % <br></br>
+          <WiStrongWind size="24px" /> {current.windSpeed} km/h
+        </Card.Text>
       </Card.Body>
       <Card.Footer>
         <Card.Text>Proximos días</Card.Text>
