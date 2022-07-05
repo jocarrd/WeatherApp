@@ -10,7 +10,6 @@ export default function Home() {
 
   return (
     <div className="container">
-      ingles english to
       <div className="row mt-5">
         <div className="col-xl-12">
           <h1 className="mb-5 ">
