@@ -4,6 +4,8 @@ import Card from "react-bootstrap/Card";
 import { DayPrediction } from "../DayPrediction";
 import { WiStrongWind, WiHumidity } from "react-icons/wi";
 import PropTypes from "prop-types";
+import Spinner from "react-bootstrap/Spinner";
+import { FormattedMessage } from "react-intl";
 import {
   getDayName,
   getDate,
@@ -12,7 +14,25 @@ import {
   getYear,
 } from "../../utilities/date";
 
-export function WeatherCard({ location, current, dailyPrediction }) {
+function Loader() {
+  return (
+    <div className="spinner">
+      <Spinner animation="border" role="status"></Spinner>
+      <p className="">
+        <FormattedMessage id="app.spinner"></FormattedMessage>
+      </p>
+    </div>
+  );
+}
+
+export function WeatherCard({
+  location,
+  current,
+  dailyPrediction,
+  loading = true,
+}) {
+  if (loading) return <Loader></Loader>;
+
   return (
     <Card className="text-center">
       <Card.Header>{location}</Card.Header>
@@ -67,6 +87,7 @@ export function WeatherCard({ location, current, dailyPrediction }) {
 
 WeatherCard.propTypes = {
   location: PropTypes.string.isRequired,
+  loading: PropTypes.bool,
   current: PropTypes.shape({
     icon: PropTypes.string.isRequired,
     temperature: PropTypes.number.isRequired,
