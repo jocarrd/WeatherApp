@@ -3,7 +3,7 @@ import Form from "react-bootstrap/Form";
 import { useSearch } from "../../hooks/useSearch";
 import { options } from "../../utilities/options";
 
-export default function SearchForm() {
+export function SearchForm() {
   const { location, setLocation } = useSearch();
 
   const handleOnChange = (data) => {

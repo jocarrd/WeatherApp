@@ -1,7 +1,7 @@
 import React from "react";
 import "../WeatherCard/WeatherCard.css";
 import Card from "react-bootstrap/Card";
-import DayPrediction from "../DayPrediction";
+import { DayPrediction } from "../DayPrediction";
 import { WiStrongWind, WiHumidity } from "react-icons/wi";
 import PropTypes from "prop-types";
 import {
@@ -12,28 +12,7 @@ import {
   getYear,
 } from "../../utilities/date";
 
-WeatherCard.propTypes = {
-  location: PropTypes.string.isRequired,
-  current: PropTypes.shape({
-    icon: PropTypes.string.isRequired,
-    temperature: PropTypes.number.isRequired,
-    description: PropTypes.string.isRequired,
-    dt: PropTypes.number.isRequired,
-    windSpeed: PropTypes.number.isRequired,
-    humidity: PropTypes.number.isRequired,
-  }).isRequired,
-  dailyPrediction: PropTypes.arrayOf(
-    PropTypes.shape({
-      temp: PropTypes.shape({
-        min: PropTypes.number.isRequired,
-        max: PropTypes.number.isRequired,
-      }),
-      dt: PropTypes.number.isRequired,
-      weather: PropTypes.array.isRequired,
-    })
-  ),
-};
-export default function WeatherCard({ location, current, dailyPrediction }) {
+export function WeatherCard({ location, current, dailyPrediction }) {
   return (
     <Card className="text-center">
       <Card.Header>{location}</Card.Header>
@@ -85,3 +64,25 @@ export default function WeatherCard({ location, current, dailyPrediction }) {
     </Card>
   );
 }
+
+WeatherCard.propTypes = {
+  location: PropTypes.string.isRequired,
+  current: PropTypes.shape({
+    icon: PropTypes.string.isRequired,
+    temperature: PropTypes.number.isRequired,
+    description: PropTypes.string.isRequired,
+    dt: PropTypes.number.isRequired,
+    windSpeed: PropTypes.number.isRequired,
+    humidity: PropTypes.number.isRequired,
+  }).isRequired,
+  dailyPrediction: PropTypes.arrayOf(
+    PropTypes.shape({
+      temp: PropTypes.shape({
+        min: PropTypes.number.isRequired,
+        max: PropTypes.number.isRequired,
+      }).isRequired,
+      dt: PropTypes.number.isRequired,
+      weather: PropTypes.array.isRequired,
+    })
+  ).isRequired,
+};

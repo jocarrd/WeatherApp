@@ -15,24 +15,26 @@ export function useSearch() {
       const datos = { ...data[0] };
       OpenWeatherServices.weatherPrediction(datos.lat, datos.lon).then(
         (response) => {
-          const description = response.current.weather[0].description;
-          const icon = response.current.weather[0].icon;
-          const daily = response.daily;
-          const humidity = response.current.humidity;
-          const windSpeed = response.current.wind_speed;
-          const windDeg = response.current.wind_deg;
-          const pressure = response.current.pressure;
-          const dewPoint = response.current.dew_point;
-          const feelsLike = response.current.feels_like;
-          const dt = response.current.dt;
+          const { description, icon } = response.current.weather[0];
+          const { daily } = response;
+          const {
+            temp: temperature,
+            humidity,
+            wind_speed: windSpeed,
+            wind_deg: windDeg,
+            pressure,
+            dew_point: dewPoint,
+            feels_like: feelsLike,
+            dt,
+          } = response.current;
 
           setPrediction({
             current: {
-              dt: dt,
-              temperature: response.current.temp,
+              dt,
+              temperature,
               description: description,
               icon: icon,
-              humidity: humidity,
+              humidity,
               windSpeed,
               windDeg,
               pressure,

@@ -20,7 +20,7 @@ describe("<DayPrediction>", () => {
     expect(component.container).toHaveTextContent("30 | 5");
     expect(screen.getByRole("img")).toHaveAttribute(
       "src",
-      "http://openweathermap.org/img/wn/01d@2x.png"
+      "https://openweathermap.org/img/wn/01d@2x.png"
     );
     expect(screen.getByRole("img")).toHaveAttribute("alt", "prediction");
   });
