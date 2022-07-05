@@ -24,7 +24,7 @@ export default function DayPrediction({
       </p>
       <img
         alt="prediction"
-        src={`http://openweathermap.org/img/wn/${icon}@2x.png`}
+        src={`https://openweathermap.org/img/wn/${icon}@2x.png`}
       ></img>
       <p>
         <span className="red">{tempMax} </span> |{" "}

@@ -51,7 +51,7 @@ export default function WeatherCard({ location, current, dailyPrediction }) {
         <div className="row">
           <div className="col">
             <img
-              src={`http://openweathermap.org/img/wn/${current?.icon}@2x.png`}
+              src={`https://openweathermap.org/img/wn/${current?.icon}@2x.png`}
             ></img>
           </div>
           <div className="col">
