@@ -1,6 +1,6 @@
 import React from "react";
-import SearchForm from "../../componentes/SearchForm";
-import WeatherCard from "../../componentes/WeatherCard";
+import SearchForm from "../../components/SearchForm";
+import WeatherCard from "../../components/WeatherCard";
 import { useSearch } from "../../hooks/useSearch";
 import Spinner from "react-bootstrap/Spinner";
 import "../Home/Home.css";
@@ -10,6 +10,7 @@ export default function Home() {
 
   return (
     <div className="container">
+      ingles english to
       <div className="row mt-5">
         <div className="col-xl-12">
           <h1 className="mb-5 ">
@@ -18,7 +19,6 @@ export default function Home() {
           <SearchForm />
         </div>
       </div>
-
       <div className="row mt-5">
         <div className="col-md-12">
           {!loading ? (
