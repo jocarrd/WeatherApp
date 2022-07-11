@@ -1,8 +1,21 @@
-import React from "react";
+import * as React from "react";
 import "../DayPrediction/DayPrediction.css";
-import PropTypes from "prop-types";
 
-export function DayPrediction({ dayName, dayNumber, icon, tempMax, tempMin }) {
+interface IDayPrediction {
+  dayName: string;
+  dayNumber: number;
+  icon: string;
+  tempMax: number;
+  tempMin: number;
+}
+
+export function DayPrediction({
+  dayName,
+  dayNumber,
+  icon,
+  tempMax,
+  tempMin,
+}: IDayPrediction) {
   return (
     <div className="day-prediction-container">
       <p>
@@ -19,7 +32,7 @@ export function DayPrediction({ dayName, dayNumber, icon, tempMax, tempMin }) {
     </div>
   );
 }
-
+/*
 DayPrediction.propTypes = {
   dayName: PropTypes.string.isRequired,
   dayNumber: PropTypes.number.isRequired,
@@ -27,3 +40,4 @@ DayPrediction.propTypes = {
   tempMax: PropTypes.number.isRequired,
   tempMin: PropTypes.number.isRequired,
 };
+*/

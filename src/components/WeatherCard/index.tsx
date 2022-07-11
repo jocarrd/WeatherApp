@@ -1,9 +1,8 @@
-import React from "react";
+import * as React from "react";
 import "../WeatherCard/WeatherCard.css";
 import Card from "react-bootstrap/Card";
 import { DayPrediction } from "../DayPrediction";
 import { WiStrongWind, WiHumidity } from "react-icons/wi";
-import PropTypes from "prop-types";
 import Spinner from "react-bootstrap/Spinner";
 import { FormattedMessage } from "react-intl";
 import {
@@ -19,7 +18,7 @@ function Loader() {
     <div className="spinner">
       <Spinner animation="border" role="status"></Spinner>
       <p className="">
-        <FormattedMessage id="app.spinner"></FormattedMessage>
+        <FormattedMessage id="spinner"></FormattedMessage>
       </p>
     </div>
   );
@@ -30,7 +29,7 @@ export function WeatherCard({
   current,
   dailyPrediction,
   loading = true,
-}) {
+}: IWeatherCard) {
   if (loading) return <Loader></Loader>;
 
   return (
@@ -50,6 +49,7 @@ export function WeatherCard({
         <div className="row">
           <div className="col">
             <img
+              alt="Current weather"
               src={`https://openweathermap.org/img/wn/${current?.icon}@2x.png`}
             ></img>
           </div>
@@ -59,8 +59,10 @@ export function WeatherCard({
         </div>
 
         <Card.Text>
-          <WiHumidity size="24px" /> {current.humidity} % <br></br>
-          <WiStrongWind size="24px" /> {current.windSpeed} km/h
+          <>
+            <WiHumidity size="24px" /> {current.humidity} % <br></br>
+            <WiStrongWind size="24px" /> {current.windSpeed} km/h
+          </>
         </Card.Text>
       </Card.Body>
       <Card.Footer>
@@ -85,6 +87,30 @@ export function WeatherCard({
   );
 }
 
+interface IWeatherCard {
+  location: string;
+  current: {
+    temperature: number;
+    icon: string;
+    description: string;
+    dt: number;
+    windSpeed: number;
+    humidity: number;
+  };
+  dailyPrediction: Array<IDaily>;
+  loading: boolean;
+}
+
+interface IDaily {
+  temp: {
+    min: number;
+    max: number;
+  };
+  dt: number;
+  weather: Array<{ icon: string }>;
+}
+
+/*
 WeatherCard.propTypes = {
   location: PropTypes.string.isRequired,
   loading: PropTypes.bool,
@@ -107,3 +133,4 @@ WeatherCard.propTypes = {
     })
   ).isRequired,
 };
+*/

@@ -1,8 +1,8 @@
 import API from "./config";
-import OpenWeatherEP from "../services/OpenWeatherEP";
+import OpenWeatherEP from "./OpenWeatherEP";
 
 const OpenWeatherServices = {
-  weatherPrediction: (lat, lon) =>
+  weatherPrediction: (lat: number, lon:number) =>
     new Promise((resolve, reject) => {
       API.get(
         `${OpenWeatherEP.WEATHER_PREDICTION}?lat=${lat}&lon=${lon}&units=metric&appid=${OpenWeatherEP.API_KEY}`
@@ -11,7 +11,7 @@ const OpenWeatherServices = {
         .catch(reject);
     }),
 
-  geoCoding: (cityName, limit) =>
+  geoCoding: (cityName: string, limit: number) =>
     new Promise((resolve, reject) => {
       API.get(
         `${OpenWeatherEP.GEOCODING}?q=${cityName}&limit=${limit}&appid=${OpenWeatherEP.API_KEY}`

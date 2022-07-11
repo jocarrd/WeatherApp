@@ -1,14 +1,11 @@
-import React, { useState } from "react";
-import PropTypes from "prop-types";
-const Context = React.createContext({});
+import * as React from "react";
+import { useState } from "react";
 
-SearhContextProvider.propTypes = {
-  children: PropTypes.node.isRequired,
-};
+const Context = React.createContext({});
 
 export function SearhContextProvider({ children }) {
   const [prediction, setPrediction] = useState(() =>
-    JSON.parse(window.localStorage.getItem("lastPrediction"))
+    JSON.parse(window.localStorage.getItem("lastPrediction") as string)
   );
   const [location, setLocation] = useState(
     localStorage.getItem("lastLocation") || "Logroño"
@@ -23,4 +20,9 @@ export function SearhContextProvider({ children }) {
   );
 }
 
+/*
+SearhContextProvider.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+*/
 export default Context;

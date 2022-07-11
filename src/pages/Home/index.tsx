@@ -1,6 +1,6 @@
-import React from "react";
-import { SearchForm } from "../../components/SearchForm";
-import { WeatherCard } from "../../components/WeatherCard";
+import * as React from "react";
+import { SearchForm } from "../../components/SearchForm/index";
+import { WeatherCard } from "../../components/WeatherCard/index";
 import { useSearch } from "../../hooks/useSearch";
 
 import { FormattedMessage } from "react-intl";
@@ -14,7 +14,7 @@ export default function Home() {
       <div className="row mt-5">
         <div className="col-xl-12">
           <h1 className="mb-5 ">
-            <FormattedMessage id="app.text"></FormattedMessage>
+            <FormattedMessage id="selectText"></FormattedMessage>
           </h1>
           <SearchForm />
         </div>

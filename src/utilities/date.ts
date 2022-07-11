@@ -1,15 +1,15 @@
-export const getDayName = (dt) => {
+export const getDayName = (dt: number) => {
   return new Date(dt * 1000).toLocaleString("es", { weekday: "long" });
 };
-export const getMonthName = (dt) => {
+export const getMonthName = (dt: number) => {
   return new Date(dt * 1000).toLocaleString("es", { month: "long" });
 };
-export const getDate = (dt) => {
+export const getDate = (dt: number) => {
   return new Date(dt * 1000).getDate();
 };
-export const getYear = (dt) => {
+export const getYear = (dt: number) => {
   return new Date(dt * 1000).toLocaleString("es", { year: "numeric" });
 };
-export const localeTimeString = (dt) => {
+export const localeTimeString = (dt: number) => {
   return new Date(dt * 1000).toLocaleTimeString();
 };

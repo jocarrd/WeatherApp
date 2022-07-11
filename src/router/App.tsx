@@ -1,6 +1,6 @@
-import React from "react";
+import * as React from "react";
 import { Routes, Route } from "react-router-dom";
-import Home from "../pages/Home";
+import Home from "../pages/Home/index";
 import { SearhContextProvider } from "../context/searchContext";
 
 function App() {
