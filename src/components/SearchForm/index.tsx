@@ -6,7 +6,7 @@ import { options } from "../../utilities/options";
 export function SearchForm() {
   const { location, setLocation } = useSearch();
 
-  const handleOnChange = (data) => {
+  const handleOnChange = (data: any) => {
     setLocation(data.target.value);
   };
   return (

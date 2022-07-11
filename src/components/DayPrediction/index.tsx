@@ -1,13 +1,7 @@
 import * as React from "react";
 import "../DayPrediction/DayPrediction.css";
 
-interface IDayPrediction {
-  dayName: string;
-  dayNumber: number;
-  icon: string;
-  tempMax: number;
-  tempMin: number;
-}
+import { IDayPrediction } from "../../types";
 
 export function DayPrediction({
   dayName,
@@ -32,6 +26,7 @@ export function DayPrediction({
     </div>
   );
 }
+
 /*
 DayPrediction.propTypes = {
   dayName: PropTypes.string.isRequired,

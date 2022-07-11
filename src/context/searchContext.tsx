@@ -2,8 +2,11 @@ import * as React from "react";
 import { useState } from "react";
 
 const Context = React.createContext({});
+interface Props {
+  children: React.ReactNode;
+}
 
-export function SearhContextProvider({ children }) {
+export function SearhContextProvider({ children }: Props) {
   const [prediction, setPrediction] = useState(() =>
     JSON.parse(window.localStorage.getItem("lastPrediction") as string)
   );

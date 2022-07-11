@@ -3,18 +3,20 @@ import { useContext, useEffect, useState } from "react";
 import Context from "../context/searchContext";
 import OpenWeatherServices from "../services/OpenWeatherServices";
 
+import { TContext } from "../types";
+
+
 export function useSearch() {
-  const { prediction, setPrediction, location, setLocation } =
-    useContext(Context);
+  const {prediction, setPrediction, location, setLocation } = useContext(Context) as TContext;
 
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     setLoading(true);
-    OpenWeatherServices.geoCoding(`${location},ES`, 2).then((data) => {
+    OpenWeatherServices.geoCoding(`${location},ES`, 2).then((data: any) => {
       const datos = { ...data[0] };
       OpenWeatherServices.weatherPrediction(datos.lat, datos.lon).then(
-        (response) => {
+        (response: any) => {
           const { description, icon } = response.current.weather[0];
           const { daily } = response;
           const {

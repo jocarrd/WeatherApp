@@ -12,6 +12,7 @@ import {
   localeTimeString,
   getYear,
 } from "../../utilities/date";
+import { IWeatherCard } from "../../types";
 
 function Loader() {
   return (
@@ -85,29 +86,6 @@ export function WeatherCard({
       </Card.Footer>
     </Card>
   );
-}
-
-interface IWeatherCard {
-  location: string;
-  current: {
-    temperature: number;
-    icon: string;
-    description: string;
-    dt: number;
-    windSpeed: number;
-    humidity: number;
-  };
-  dailyPrediction: Array<IDaily>;
-  loading: boolean;
-}
-
-interface IDaily {
-  temp: {
-    min: number;
-    max: number;
-  };
-  dt: number;
-  weather: Array<{ icon: string }>;
 }
 
 /*
