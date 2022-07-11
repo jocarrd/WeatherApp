@@ -3,7 +3,7 @@ import { useContext, useEffect, useState } from "react";
 import Context from "../context/searchContext";
 import OpenWeatherServices from "../services/OpenWeatherServices";
 
-import { TContext } from "../types";
+import { TContext,IWeatherResponse} from "../types";
 
 
 export function useSearch() {
@@ -16,7 +16,7 @@ export function useSearch() {
     OpenWeatherServices.geoCoding(`${location},ES`, 2).then((data: any) => {
       const datos = { ...data[0] };
       OpenWeatherServices.weatherPrediction(datos.lat, datos.lon).then(
-        (response: any) => {
+        (response: IWeatherResponse)  => {
           const { description, icon } = response.current.weather[0];
           const { daily } = response;
           const {
@@ -44,7 +44,7 @@ export function useSearch() {
               feelsLike,
             },
             daily: daily,
-          });
+          })  ;
 
           localStorage.setItem("lastLocation", location);
           localStorage.setItem("lastPrediction", JSON.stringify(response));
@@ -55,5 +55,5 @@ export function useSearch() {
     });
   }, [location]);
 
-  return { prediction, loading, location, setLocation };
+  return { prediction, loading, location, setLocation } ;
 }

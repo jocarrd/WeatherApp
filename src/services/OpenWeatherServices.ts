@@ -1,13 +1,14 @@
 import API from "./config";
 import OpenWeatherEP from "./OpenWeatherEP";
+import { IWeatherResponse } from "../types";
 
 const OpenWeatherServices = {
-  weatherPrediction: (lat: number, lon:number) =>
+  weatherPrediction: (lat: number, lon:number) : Promise<IWeatherResponse>  =>
     new Promise((resolve, reject) => {
       API.get(
         `${OpenWeatherEP.WEATHER_PREDICTION}?lat=${lat}&lon=${lon}&units=metric&appid=${OpenWeatherEP.API_KEY}`
       )
-        .then((response) => resolve(response.data))
+        .then((response) => resolve(response.data ))
         .catch(reject);
     }),
 
@@ -16,7 +17,7 @@ const OpenWeatherServices = {
       API.get(
         `${OpenWeatherEP.GEOCODING}?q=${cityName}&limit=${limit}&appid=${OpenWeatherEP.API_KEY}`
       )
-        .then((response) => resolve(response.data))
+        .then((response) => resolve(response.data ))
         .catch(reject);
     }),
 };

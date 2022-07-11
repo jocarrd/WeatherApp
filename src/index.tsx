@@ -10,7 +10,6 @@ const language = navigator.language.split(/[-_]/)[0];
 const container = document.getElementById("root") as HTMLElement;
 const root = ReactDOM.createRoot(container);
 const messages = (translations as any)[language];
-console.log(messages);
 
 root.render(
   <IntlProvider locale={language} defaultLocale="es" messages={messages}>

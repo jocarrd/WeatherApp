@@ -26,7 +26,7 @@
     location:string,
     setLocation: Function
   }
-  
+ 
 
    export interface IDayPrediction {
     dayName: string;
@@ -60,4 +60,22 @@
 
   
  
-  
+  export interface IWeatherResponse{
+
+    current:{
+      weather: Array<{description:string, icon:string}>
+      dt: number
+      temp: number,
+      description: string,
+      icon:string,
+      humidity: number,
+      wind_speed: number,
+      wind_deg:number,
+      pressure: number,
+      dew_point: number,
+      feels_like: number,
+      
+
+    }
+    daily: Array<Object>
+  }
