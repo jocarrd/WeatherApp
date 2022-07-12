@@ -30,10 +30,11 @@
 <br />
 <div align="center">
   <a href="https://github.com/jocarrd/WeatherApp">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="https://user-images.githubusercontent.com/55456507/178431373-7e754af9-9c79-48e9-b5d3-005211e9a394.png
+" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Best-README-Template</h3>
+  <h3 align="center">WeatherApp</h3>
 
   <p align="center">
     Check the weather from any device!
