@@ -30,8 +30,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/jocarrd/WeatherApp">
-    <img src="https://user-images.githubusercontent.com/55456507/178431373-7e754af9-9c79-48e9-b5d3-005211e9a394.png
-" alt="Logo" width="80" height="80">
+    <img src="https://user-images.githubusercontent.com/55456507/178431373-7e754af9-9c79-48e9-b5d3-005211e9a394.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">WeatherApp</h3>
@@ -56,7 +55,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://weather-app-jocarrd.vercel.app)
+[![Product Name Screen Shot][product-screenshot]](https://user-images.githubusercontent.com/55456507/178432319-bfd2193f-f970-4ac9-90be-0b61f7a805e3.png)
 
 The weatherApp also provides atmospheric pressure, weather conditions, visibility distance, relative humidity, precipitation , dew point, wind speed and direction, in addition to 7 days in future and current weather forecast.
 
@@ -94,7 +93,7 @@ This is an example of how to list things you need to use the software and how to
   ```
   * node
     ```sh
-   npm install -g npm
+    npm install -g npm
   ```
   npm install -g npm
 
@@ -102,7 +101,7 @@ This is an example of how to list things you need to use the software and how to
 
 _Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
 
-1. Get a free API Key at [https://example.com](https://example.com)
+1. Get a free API Key at [https://home.openweathermap.org/users/sign_in](https://home.openweathermap.org/users/sign_in)
 2. Clone the repo
    ```sh
    git clone https://github.com/jocarrd/WeatherApp.git
@@ -178,9 +177,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/CarreraDev) - jorgecarrera98d@gmail.com
+Your Name - [@CarreraD](https://twitter.com/CarreraDev) - jorgecarrera98d@gmail.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/jocarrd/WeatherApp)
+Project Link: [https://github.com/jocarrd/WeatherApp](https://github.com/jocarrd/WeatherApp)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
