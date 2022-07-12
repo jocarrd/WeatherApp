@@ -236,5 +236,5 @@ Use this space to list resources you find helpful and would like to give credit 
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 [JQuery-url]: https://jquery.com 
 [TypeScript-url]: https://react-typescript-cheatsheet.netlify.app
-[TypeScript.com]: https://user-images.githubusercontent.com/55456507/178435274-e01f3e06-7a99-4632-a752-b8a1bcef59f2.png
+[TypeScript.com]: https://img.shields.io/badge/TypeScript-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 
