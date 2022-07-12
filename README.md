@@ -235,6 +235,6 @@ Use this space to list resources you find helpful and would like to give credit 
 [Bootstrap-url]: https://getbootstrap.com
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 [JQuery-url]: https://jquery.com 
-[TipeScript-url]: https://react-typescript-cheatsheet.netlify.app
-[TipeScript.com]: https://user-images.githubusercontent.com/55456507/178435274-e01f3e06-7a99-4632-a752-b8a1bcef59f2.png
+[TypeScript-url]: https://react-typescript-cheatsheet.netlify.app
+[TypeScript.com]: https://user-images.githubusercontent.com/55456507/178435274-e01f3e06-7a99-4632-a752-b8a1bcef59f2.png
 
