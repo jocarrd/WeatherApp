@@ -59,7 +59,7 @@
 
 The weatherApp also provides atmospheric pressure, weather conditions, visibility distance, relative humidity, precipitation , dew point, wind speed and direction, in addition to 7 days in future and current weather forecast.
 
-The application uses<a href="https://openweathermap.org/api">OpenWeather</> API to obtain the current and future weather conditions, it is necessary to have an API key for the correct operation of the application.
+The application uses<a href="https://openweathermap.org/api">OpenWeather</a> API to obtain the current and future weather conditions, it is necessary to have an API key for the correct operation of the application.
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -72,6 +72,7 @@ This section should list any major frameworks/libraries used to bootstrap your p
 
 * [![React][React.js]][React-url]
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
+* [![TypeScript][TypeScript.com]][Bootstrap-url]
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -91,10 +92,10 @@ This is an example of how to list things you need to use the software and how to
   ```sh
   npm install npm@latest -g
   ```
-  * node
-    ```sh
-    npm install -g npm
-  ```
+* node
+   ```sh
+  npm install -g npm
+  
  
 
 ### Installation
@@ -234,3 +235,6 @@ Use this space to list resources you find helpful and would like to give credit 
 [Bootstrap-url]: https://getbootstrap.com
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 [JQuery-url]: https://jquery.com 
+[TipeScript-url]: https://react-typescript-cheatsheet.netlify.app/
+[TipeScript.com]: https://user-images.githubusercontent.com/55456507/178435274-e01f3e06-7a99-4632-a752-b8a1bcef59f2.png
+
