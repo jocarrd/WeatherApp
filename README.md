@@ -95,7 +95,7 @@ This is an example of how to list things you need to use the software and how to
     ```sh
     npm install -g npm
   ```
-  npm install -g npm
+ 
 
 ### Installation
 
@@ -205,19 +205,19 @@ Use this space to list resources you find helpful and would like to give credit 
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/jocarrd/Best-README-Template.svg?style=for-the-badge
+[contributors-url]: https://github.com/jocarrd/WeatherApp/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/jocarrd/Best-README-Template.svg?style=for-the-badge
+[forks-url]: https://github.com/jocarrd/WeatherApp/network/members
+[stars-shield]: https://img.shields.io/github/stars/jocarrd/Best-README-Template.svg?style=for-the-badge
+[stars-url]: https://github.com/jocarrd/WeatherApp/stargazers
+[issues-shield]: https://img.shields.io/github/issues/jocarrd/Best-README-Template.svg?style=for-the-badge
+[issues-url]: https://github.com/jocarrd/Best-README-Template/issues
+[license-shield]: https://img.shields.io/github/license/jocarrd/Best-README-Template.svg?style=for-the-badge
+[license-url]: ttps://github.com/jocarrd/WeatherApp/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: images/screenshot.png
+[linkedin-url]: https://www.linkedin.com/in/jorge-carrera-848577200/
+[product-screenshot]: https://user-images.githubusercontent.com/55456507/178432319-bfd2193f-f970-4ac9-90be-0b61f7a805e3.png
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
