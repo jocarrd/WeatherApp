@@ -131,23 +131,6 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 
 
-<!-- ROADMAP -->
-## Roadmap
-
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
-
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
 <!-- CONTRIBUTING -->
 ## Contributing
 
@@ -178,7 +161,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@CarreraD](https://twitter.com/CarreraDev) - jorgecarrera98d@gmail.com
+ jorgecarrera98d@gmail.com
 
 Project Link: [https://github.com/jocarrd/WeatherApp](https://github.com/jocarrd/WeatherApp)
 
@@ -186,55 +169,4 @@ Project Link: [https://github.com/jocarrd/WeatherApp](https://github.com/jocarrd
 
 
 
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
-
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-* [Malven's Grid Cheatsheet](https://grid.malven.co/)
-* [Img Shields](https://shields.io)
-* [GitHub Pages](https://pages.github.com)
-* [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/jocarrd/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/jocarrd/WeatherApp/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/jocarrd/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/jocarrd/WeatherApp/network/members
-[stars-shield]: https://img.shields.io/github/stars/jocarrd/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/jocarrd/WeatherApp/stargazers
-[issues-shield]: https://img.shields.io/github/issues/jocarrd/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/jocarrd/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/jocarrd/Best-README-Template.svg?style=for-the-badge
-[license-url]: ttps://github.com/jocarrd/WeatherApp/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://www.linkedin.com/in/jorge-carrera-848577200/
-[product-screenshot]: https://user-images.githubusercontent.com/55456507/178432319-bfd2193f-f970-4ac9-90be-0b61f7a805e3.png
-[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
-[Next-url]: https://nextjs.org/
-[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[React-url]: https://reactjs.org/
-[Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
-[Vue-url]: https://vuejs.org/
-[Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
-[Angular-url]: https://angular.io/
-[Svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
-[Svelte-url]: https://svelte.dev/
-[Laravel.com]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
-[Laravel-url]: https://laravel.com
-[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
-[Bootstrap-url]: https://getbootstrap.com
-[JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
-[JQuery-url]: https://jquery.com 
-[TypeScript-url]: https://react-typescript-cheatsheet.netlify.app
-[TypeScript.com]: https://img.shields.io/badge/TypeScript-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 
