@@ -30,7 +30,8 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://user-images.githubusercontent.com/55456507/178432319-bfd2193f-f970-4ac9-90be-0b61f7a805e3.png)
+[![Product Name Screen Shot][product-screenshot]](![image](https://github.com/jocarrd/WeatherApp/assets/55456507/20076160-ed72-4ccd-aa55-7538185f0831)
+)
 
 The weatherApp also provides atmospheric pressure, weather conditions, visibility distance, relative humidity, precipitation , dew point, wind speed and direction, in addition to 7 days in future and current weather forecast.
 
@@ -45,9 +46,9 @@ The application uses <a href="https://openweathermap.org/api">OpenWeather</a> AP
 
 This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
-* [![React][React.js]][React-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![TypeScript][TypeScript.com]][TypeScript-url]
+* React
+* Bootstrap
+* TypeScript
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
