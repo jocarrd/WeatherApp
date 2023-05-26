@@ -30,8 +30,6 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](![image](https://github.com/jocarrd/WeatherApp/assets/55456507/20076160-ed72-4ccd-aa55-7538185f0831)
-)
 
 The weatherApp also provides atmospheric pressure, weather conditions, visibility distance, relative humidity, precipitation , dew point, wind speed and direction, in addition to 7 days in future and current weather forecast.
 
